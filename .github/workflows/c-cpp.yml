@@ -17,3 +17,7 @@ jobs:
       run: ln -s Makefile.Linux Makefile
     - name: build
       run: make
+    - name: docker-build
+      run: docker login -u $DOCKER_LOGIN -p $DOCKER_TOKEN && docker build -f Dockerfile.full -t truegameover/3proxy .
+    - name: docker-push
+      run: docker push truegameover/3proxy:latest
