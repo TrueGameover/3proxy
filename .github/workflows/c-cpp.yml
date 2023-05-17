@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     environment: docker
-    runs-on: busybox:glibc
+    runs-on: ubuntu-22.04
 
     steps:
     - uses: actions/checkout@v3
